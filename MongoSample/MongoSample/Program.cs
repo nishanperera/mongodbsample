@@ -1,10 +1,4 @@
 ﻿using System;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
@@ -19,6 +13,9 @@ namespace MongoSample
 
             const string connectionString = "mongodb://localhost";
             var client = new MongoClient(connectionString);
+
+            //var client = new MongoClient(new MongoUrl("https://ingenie.blob.core.windows.net/journey-store/MongoDb"));
+
 
             var server = client.GetServer();
             var database = server.GetDatabase("TestMongoDb");
